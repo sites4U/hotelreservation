@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Authorization" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.conrollers.mainWinController">
+    <children>
+        <ImageView fitHeight="446.0" fitWidth="710.0" opacity="0.44" pickOnBounds="true">
+            <image>
+                <Image url="@../assets/hotel.jpeg" />
+            </image>
+        </ImageView>
+        <Label alignment="TOP_CENTER" layoutX="131.0" layoutY="25.0" prefHeight="47.0" prefWidth="439.0" text="Hotel Reservation" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="25.0">
+            <font>
+                <Font name="Elephant" size="46.0" />
+            </font>
+        </Label>
+      <Button fx:id="btnRegistration" layoutX="35.0" layoutY="106.0" mnemonicParsing="false" style="-fx-background-color: f39c63; -fx-border-color: #ec7700;" text="Guest Registration" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnReservation" layoutX="269.0" layoutY="106.0" mnemonicParsing="false" style="-fx-background-color: f39c63; -fx-border-color: #ec7700;" text="Room Reservation" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnRoomDetails" layoutX="35.0" layoutY="388.0" mnemonicParsing="false" style="-fx-background-color: f39c63; -fx-border-color: #ec7700;" text="Room Details" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEditReserv" layoutX="280.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#editReserv" style="-fx-background-color: f39c63; -fx-border-color: #ec7700;" text="Edit Reservation" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDeleteReserv" layoutX="487.0" layoutY="106.0" mnemonicParsing="false" onMouseClicked="#deleteReserv" style="-fx-background-color: f39c63; -fx-border-color: #ec7700;" text="Delete Reservation" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCloseWin" layoutX="523.0" layoutY="388.0" mnemonicParsing="false" style="-fx-background-color: f39c63; -fx-border-color: #ec7700;" text="Close Window" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="infoTable" layoutX="14.0" layoutY="158.0" prefHeight="217.0" prefWidth="679.0">
+        <columns>
+          <TableColumn fx:id="dateInCol" prefWidth="91.0" text="Date-In" />
+          <TableColumn fx:id="dateOutCol" prefWidth="91.0" text="Date-Out" />
+            <TableColumn fx:id="fullNameCol" prefWidth="150.0" text="Guest Full Name" />
+            <TableColumn fx:id="roomTypeCol" prefWidth="105.0" text="Room Type" />
+            <TableColumn fx:id="numberOfRoomCol" prefWidth="125.0" text="Number of Room" />
+            <TableColumn fx:id="requirementCol" prefWidth="116.0" text="Requirement" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>

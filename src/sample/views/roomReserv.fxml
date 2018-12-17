@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Authorization" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.conrollers.roomReservController">
+    <children>
+        <ImageView fitHeight="442.0" fitWidth="714.0" opacity="0.44" pickOnBounds="true">
+            <image>
+                <Image url="@../assets/hotel.jpeg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutY="112.0" prefHeight="324.0" prefWidth="700.0" style="-fx-background-color: #fafafa;" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0">
+            <children>
+                <Button fx:id="reservationBtn" alignment="CENTER" layoutX="174.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#reservation" prefHeight="28.0" prefWidth="152.0" style="-fx-background-color: f39c63; -fx-border-color: #ec7700; -fx-border-width: 2; -fx-border-radius: 5;" text="Reservation" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="374.0">
+                    <font>
+                        <Font name="Elephant" size="19.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label alignment="TOP_CENTER" layoutX="227.0" layoutY="9.0" prefHeight="48.0" prefWidth="306.0" text="Room Reservation" textAlignment="CENTER" textFill="#8d8c8c" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="167.0">
+                    <font>
+                        <Font name="Book Antiqua" size="37.0" />
+                    </font>
+                </Label>
+                <Button fx:id="cancelBtn" alignment="CENTER" layoutX="427.0" layoutY="261.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="159.0" style="-fx-background-color: f39c63; -fx-border-color: #ec7700; -fx-border-width: 2; -fx-border-radius: 5;" text="Close window" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Elephant" size="19.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="48.0" fitWidth="65.0" layoutX="167.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/reservbook.png" />
+                    </image>
+                </ImageView>
+            <Label layoutX="60.0" layoutY="60.0" prefHeight="42.0" prefWidth="104.0" style="-fx-font-size: 14;" text="Check-in Date:" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="536.0" />
+            <DatePicker fx:id="dateCheckIn" layoutX="163.0" layoutY="69.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="363.0" />
+            <DatePicker fx:id="dateCheckOut" layoutX="163.0" layoutY="119.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="363.0" />
+            <Label layoutX="58.0" layoutY="110.0" prefHeight="42.0" prefWidth="104.0" style="-fx-font-size: 14;" text="Check-out Date:" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="538.0" />
+            <Label layoutX="58.0" layoutY="155.0" prefHeight="42.0" prefWidth="95.0" style="-fx-font-size: 14;" text="Room Type:" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="538.0" />
+            <ComboBox fx:id="cmbRoomType" layoutX="163.0" layoutY="164.0" prefHeight="25.0" prefWidth="152.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="385.0" />
+            <Label layoutX="58.0" layoutY="200.0" prefHeight="42.0" prefWidth="95.0" style="-fx-font-size: 14;" text="Floor:" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="538.0" />
+            <ComboBox fx:id="cmbFloor" layoutX="163.0" layoutY="208.0" prefHeight="25.0" prefWidth="152.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="385.0" />
+            <Label layoutX="389.0" layoutY="200.0" prefHeight="42.0" prefWidth="95.0" style="-fx-font-size: 14;" text="Total people:" AnchorPane.leftAnchor="389.0" AnchorPane.rightAnchor="216.0" />
+            <Label layoutX="389.0" layoutY="111.0" prefHeight="42.0" prefWidth="95.0" style="-fx-font-size: 14;" text="Requirements:" />
+            <Label layoutX="389.0" layoutY="60.0" prefHeight="42.0" prefWidth="95.0" style="-fx-font-size: 14;" text="Guest :" />
+            <Label layoutX="389.0" layoutY="157.0" prefHeight="42.0" prefWidth="95.0" style="-fx-font-size: 14;" text="Room:" />
+            <ComboBox fx:id="cmbRequirement" layoutX="484.0" layoutY="120.0" prefHeight="25.0" prefWidth="133.0" />
+            <ComboBox fx:id="cmbRoom" layoutX="484.0" layoutY="165.0" prefHeight="25.0" prefWidth="133.0" />
+            <ComboBox fx:id="cmbGuest" layoutX="484.0" layoutY="68.0" prefHeight="25.0" prefWidth="133.0" />
+            <TextField fx:id="txtTotalPeople" layoutX="484.0" layoutY="208.0" prefHeight="25.0" prefWidth="133.0" />
+            </children></AnchorPane>
+      <Label alignment="TOP_CENTER" layoutX="131.0" layoutY="26.0" prefHeight="47.0" prefWidth="439.0" text="Hotel Reservation" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Elephant" size="46.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
